@@ -9,5 +9,10 @@
  * @author student
  */
 public class TrainTokens {
+    private final String color;
+    
+    public TrainTokens(String c){
+        this.color = c;
+    }
     
 }

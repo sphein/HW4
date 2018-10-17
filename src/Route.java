@@ -12,6 +12,11 @@ public class Route {
     private String color;
     private int number;
     
+    public Route(String c, int n){
+        this.color = c;
+        this.number = n;
+    }
+    
     public void setColor(String c){
         this.color = c;
     }

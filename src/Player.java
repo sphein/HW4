@@ -9,5 +9,17 @@
  * @author student
  */
 public class Player {
+    private String name;
+    private TrainTokens trains;
+    private int numTrains;
+    
+    public Player(String n, TrainTokens t){
+        this.name = n;
+        this.trains = t;
+        this.numTrains = 45;
+    }
+    
+    //public void need a fcn for updating numTrains
+          
     
 }
