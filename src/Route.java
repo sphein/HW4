@@ -9,5 +9,19 @@
  * @author student
  */
 public class Route {
+    private String color;
+    private int number;
     
+    public void setColor(String c){
+        this.color = c;
+    }
+    public String getColor(){
+        return this.color;
+    }
+    public void setNumber(int n){
+        this.number = n;
+    }
+    public int getNumber(){
+        return this.number;
+    }
 }
