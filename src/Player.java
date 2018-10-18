@@ -16,5 +16,7 @@ public class Player {
     
     //public void need a fcn for updating numTrains
           
-    
+    public int getnumTrains(){
+        return this.numTrains;
+    }
 }
