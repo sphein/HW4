@@ -18,7 +18,7 @@ public class City {
     public void addRoute(Route r){
         this.list.add(r);
     }
-    
+
     public ArrayList<Route> getRoute(){
         return this.list;
     }
