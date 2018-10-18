@@ -60,31 +60,13 @@ public class GameTest {
 
         //set the second city
         City c2 = new City("Fremont");
-        r1 = new Route("Red", 4);
         r2 = new Route("Yellow", 6);
         c2.addRoute(r1);
         c2.addRoute(r2);
         board.addCity(c2);
         
         //assert statements
-        
-        assertEquals(true, tester.enoughTrains(P1, c1, c2), "Player has enough trains");
+        assertEquals("Player has enough trains",true, tester.enoughTrains(P1, c1, c2));
        }
 
-    private boolean enoughTrains(Player p, City c1, City c2){
-         
-     Route r = null;
-     for (int i = 0; i < c1.getRoute().size(); i++){
-         if (c1.getRoute().get(i) == c2.getRoute().get(0))
-             r = c1.getRoute().get(i);
-         else if (c1.getRoute().get(i) == c2.getRoute().get(1))
-             r = c1.getRoute().get(i);
-     }
-     if(r == null)
-         return false;
-     if (p.getnumTrains() >= r.getNumber())
-        return true;
-
-     return false;
- }    
 }

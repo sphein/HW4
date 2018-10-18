@@ -43,24 +43,21 @@ public class Game {
         City b = new City("Hayward");
         Route r1 = new Route("Red", 4);
         Route r2 = new Route("Blue", 5);
-        b.addRoute(r1);
-        b.addRoute(r2);
+        b.addRoute(r1); //red
+        b.addRoute(r2); //blue
         board.addCity(b);
 
         //set the second city
         b = new City("Fremont");
-        r1 = new Route("Red", 4);
-        r2 = new Route("Yellow", 6);
-        b.addRoute(r1);
-        b.addRoute(r2);
+        Route r3 = new Route("Yellow", 6);
+        b.addRoute(r1); //red
+        b.addRoute(r3); //yellow
         board.addCity(b);
 
         //Set the third city
         b = new City("Oakland");
-        r1 = new Route("Yellow", 6);
-        r2 = new Route("Blue", 5);
-        b.addRoute(r1);
-        b.addRoute(r2);
+        b.addRoute(r2); //blue
+        b.addRoute(r3); //yellow
         board.addCity(b);
         
         System.out.println("This is the board: ");
