@@ -5,7 +5,7 @@
  */
 public class Game {
 
-    public static void main(String args){
+    public static void main(String[] args){
         //declare variables
         Board board = new Board();
         Player P1;
@@ -40,6 +40,8 @@ public class Game {
         b.addRoute(r1);
         b.addRoute(r2);
         board.addCity(b);
+        
+        board.displayBoard();
 
     }  
 }

@@ -17,5 +17,12 @@ public class Board {
         this.cities.add(c);
     }
     
-    
+    public void displayBoard(){
+        System.out.println("\t\t\t\t\tH\n" +
+                            "\t\t\t\t/\t|\n" +
+                            "\t\t\t/\t\t|\n" +
+                            "\t\t/\t\t\t|\n" +
+                            "\t/\t\t\t\t|\n" +
+                            "O\t_\t_\t_\t_\tF");
+    }
 }

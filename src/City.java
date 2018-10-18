@@ -14,8 +14,6 @@ public class City {
         this.name = n;
         this.list = new ArrayList();
     }
-
-
     
     public void addRoute(Route r){
         this.list.add(r);
