@@ -1,0 +1,5 @@
+Input validation:
+  Correct repsonse to what the player wants to do on their turn.
+  Player chooses which colored train they want.
+If the player has enough trains to go on a route.
+If the player has enough train car cards to claim a route.
