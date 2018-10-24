@@ -4,5 +4,15 @@
  * @author sphein; oouk
  */
 public class TrainCarCards {
+    private String colorTrainCarCard;
     
+    public TrainCarCards(String c){
+        this.colorTrainCarCard = c;
+    }
+    
+    public String getcolorTrainCarCard(){
+        return this.colorTrainCarCard;
+    }
+    
+
 }
