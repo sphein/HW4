@@ -3,7 +3,7 @@
  * Date: 10/17/2018
  * @author sphein; oouk
  */
-public class Route {
+public class Route implements Comparable<Route>{
     private String color;
     private int number;
     
@@ -24,4 +24,14 @@ public class Route {
     public int getNumber(){
         return this.number;
     }
+
+    @Override
+    public int compareTo(Route o) {
+        if(this.color.equals(o.getColor()))
+            return 1;
+        return 0;
+    }
+
+
+
 }

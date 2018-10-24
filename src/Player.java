@@ -21,6 +21,7 @@ public class Player {
         this.SM = new ScoreMarker();
         this.DC = new ArrayList();
         this.DC.add(new DestinationCards());
+        this.pointsEarned = 0;
     }
     
     //public void need a fcn for updating numTrains
@@ -43,16 +44,21 @@ public class Player {
      * @return
      */
     public int PointsThisRound(City c1, City c2){
+
+        
          Route r = null;
-             for (int i = 0; i < c1.getRoute().size(); i++){
-                 if (c1.getRoute().get(i) == c2.getRoute().get(0))
-                     r = c1.getRoute().get(i);
-                 else if (c1.getRoute().get(i) == c2.getRoute().get(1))
-                     r = c1.getRoute().get(i);
-             }
+                 if (c1.getRoute().get(0).compareTo(c2.getRoute().get(0)) == 1){
+                                          r = c1.getRoute().get(0);
+                 } 
+
+        
+
+             
              this.pointsEarned = r.getNumber();
+             
+             
              for (int i = 0; i < DC.size(); i++){
-                 if (DC.get(i).getCity1().getRoute() == DC.get(i).getCity2().getRoute()){
+                 if (DC.get(i).getCity1().getRoute().get(0).compareTo(DC.get(i).getCity2().getRoute().get(0)) == 1){
                      this.pointsEarned = this.pointsEarned + this.DC.get(i).getPoints();
                  }
              }
