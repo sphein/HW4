@@ -19,11 +19,23 @@ public class Game {
              }
              if(r == null)
                  return false;
-             if (p.getnumTrains() >= r.getNumber())
+             else if (p.getnumTrains() >= r.getNumber())
                 return true;
              
              return false;
-         }             
+         }      
+         
+    /**
+     *
+     * @param p
+     * @param c1
+     * @param c2
+     * @return
+     */
+    public int moveScoreMarker(Player p, City c1, City c2){
+             p.getSM().changePosition(p.PointsThisRound(c1, c2));
+             return p.PointsThisRound(c1, c2);
+         }
 
     public static void main(String[] args){
         //declare variables
@@ -70,6 +82,8 @@ public class Game {
         System.out.println("[3] Draw three destination cards.");
         
         choice = sc.nextInt();
+        
+        
         
 
 
