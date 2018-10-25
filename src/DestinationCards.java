@@ -7,7 +7,10 @@ public class DestinationCards {
     private City City1;
     private City City2;
     private int points;
-    
+
+    /**
+     * constructor
+     */
     public DestinationCards(){
         Route r = new Route("Red", 3);
         this.City1 = new City("Hayward");
@@ -16,14 +19,26 @@ public class DestinationCards {
         this.City2.addRoute(r);
         this.points = 3;
     }
+
+    /**
+     * @return city object
+     */
     public City getCity1(){
         return this.City1;
     }
-        public City getCity2(){
-        return this.City2;
+
+    /**
+     * @return city object
+     */
+    public City getCity2(){
+    return this.City2;
     }
-        public int getPoints(){
-            return this.points;
-        }
-    
+
+    /**
+     *
+     * @return points 
+     */
+    public int getPoints(){
+        return this.points;
+    } 
 }

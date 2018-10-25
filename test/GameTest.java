@@ -17,25 +17,10 @@ import static org.junit.Assert.*;
  */
 public class GameTest {
     
-    public GameTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
+    /**
+     * checks to see if enoughTrain() logic is correct with default. should 
+     * return true.
+     */
     @Test
     public void enoughTrainsShouldReturnTrue(){
         //Game is tested
@@ -49,8 +34,7 @@ public class GameTest {
         a = new TrainTokens("Red");
         Player P2 = new Player("Jane", a);
         
-        //set city
-         //set the first city
+        //set the first city
         City c1 = new City("Hayward");
         Route r1 = new Route("Red", 4);
         Route r2 = new Route("Blue", 5);

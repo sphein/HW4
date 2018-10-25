@@ -4,5 +4,7 @@
  * @author sphein; oouk
  */
 public class LongestPathBonusCard {
-    
+ /**
+ * Initialize TCDeck coming soon
+ */   
 }

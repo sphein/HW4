@@ -6,6 +6,10 @@
 public class TrainTokens {
     private final String color;
     
+    /**
+     * constructor
+     * @param c sets token to color
+     */
     public TrainTokens(String c){
         this.color = c;
     }

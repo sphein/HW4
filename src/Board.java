@@ -8,15 +8,25 @@ import java.util.ArrayList;
  */
 public class Board {
     private ArrayList<City> cities;
-    
+
+    /**
+     * constructor
+     */
     public Board(){
         cities = new ArrayList();
     }
-    
+
+    /**
+     * adds a city to the list
+     * @param c object city
+     */
     public void addCity(City c){
         this.cities.add(c);
     }
-    
+
+    /**
+     * print board to user
+     */
     public void displayBoard(){
         System.out.println("\t\t\t\t\tH\n" +
                             "\t\t\t\t/\t|\n" +

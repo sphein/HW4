@@ -8,35 +8,45 @@ import java.util.Scanner;
  */
 public class Game {
     
-         public boolean enoughTrains(Player p, City c1, City c2){
+    /**
+     * determines whether if player has enough trains to obtain city from previous
+     * @param p player object
+     * @param c1 city object
+     * @param c2 city object
+     * @return
+     */
+    public boolean enoughTrains(Player p, City c1, City c2){
          
-             Route r = null;
-             for (int i = 0; i < c1.getRoute().size(); i++){
-                 if (c1.getRoute().get(i) == c2.getRoute().get(0))
-                     r = c1.getRoute().get(i);
-                 else if (c1.getRoute().get(i) == c2.getRoute().get(1))
-                     r = c1.getRoute().get(i);
-             }
-             if(r == null)
-                 return false;
-             else if (p.getnumTrains() >= r.getNumber())
-                return true;
-             
-             return false;
-         }      
+        Route r = null;
+        for (int i = 0; i < c1.getRoute().size(); i++){
+            if (c1.getRoute().get(i) == c2.getRoute().get(0))
+               r = c1.getRoute().get(i);
+            else if (c1.getRoute().get(i) == c2.getRoute().get(1))
+               r = c1.getRoute().get(i);
+        }
+        if(r == null)
+            return false;
+        else if (p.getnumTrains() >= r.getNumber())
+            return true;
+        return false;
+    }      
          
     /**
-     *
-     * @param p
-     * @param c1
-     * @param c2
+     * updates ScoreMarker based on points earned
+     * @param p player object
+     * @param c1 city object
+     * @param c2 city object
      * @return
      */
     public int moveScoreMarker(Player p, City c1, City c2){
-             p.getSM().changePosition(p.PointsThisRound(c1, c2));
-             return p.PointsThisRound(c1, c2);
+            p.getSM().changePosition(p.PointsThisRound(c1, c2));
+            return p.PointsThisRound(c1, c2);
          }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
         //declare variables
         Board board = new Board();
@@ -72,6 +82,7 @@ public class Game {
         b.addRoute(r3); //yellow
         board.addCity(b);
         
+        //display board
         System.out.println("This is the board: ");
         board.displayBoard();
         
@@ -81,11 +92,7 @@ public class Game {
         System.out.println("[2] claim a route.");
         System.out.println("[3] Draw three destination cards.");
         
+        //receive input
         choice = sc.nextInt();
-        
-        
-        
-
-
     }  
 }
