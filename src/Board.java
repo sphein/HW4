@@ -13,16 +13,23 @@ public class Board {
         cities = new ArrayList();
     }
     
-    public void addCity(City c){
-        this.cities.add(c);
+    public void initializeBoard(City c1, City c2, City c3, City c4, City c5, City c6){
+           cities.add(c1);
+           cities.add(c2);
+           cities.add(c3);
+           cities.add(c4);
+           cities.add(c5);
+           cities.add(c6);
+    }
+    public ArrayList<City> getCities(){
+        return this.cities;
     }
     
     public void displayBoard(){
-        System.out.println("\t\t\t\t\tH\n" +
-                            "\t\t\t\t/\t|\n" +
-                            "\t\t\t/\t\t|\n" +
-                            "\t\t/\t\t\t|\n" +
-                            "\t/\t\t\t\t|\n" +
-                            "O\t_\t_\t_\t_\tF");
+        System.out.println("Oakland - Blue(5) - Hayward - Yellow(4) - Fremont");
+        System.out.println(" |                      |                     |");
+        System.out.println("Red(2)               Green(3)               Red(2)");
+        System.out.println(" |                      |                     | ");
+        System.out.println("SF  - Yellow(4) -   Daly City - Blue(5) - San Jose");
     }
 }
