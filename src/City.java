@@ -21,6 +21,9 @@ public class City {
     public ArrayList<Route> getRoute(){
         return this.list;
     }
+    public String getName(){
+        return this.name;
+    }
 }
 
 
