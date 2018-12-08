@@ -6,14 +6,24 @@
 public class ScoreMarker {
     private int position;
     
-    
+    /**
+     * constructor
+     */
     public ScoreMarker(){
         this.position = 0;
     }
     
+    /**
+     * @return position of ScoreMarker
+     */
     public int getPosition(){
         return this.position;
     }
+
+    /**
+     * updates position of ScoreMarker
+     * @param a distance to move
+     */
     public void changePosition(int a){
         this.position  = a + this.position;
     }

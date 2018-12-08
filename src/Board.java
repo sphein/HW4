@@ -9,11 +9,12 @@ import java.util.ArrayList;
 public class Board {
     private ArrayList<City> cities;
     private ArrayList<Route> routes;
-    
+
     public Board(){
         cities = new ArrayList();
         routes = new ArrayList();
     }
+
     
     public void initializeBoard(City c1, City c2, City c3, City c4, City c5, City c6){
            cities.add(c1);
@@ -37,8 +38,15 @@ public class Board {
     }
     public ArrayList<Route> getRoutes(){
         return this.routes;
+
+    public void addCity(City c){
+        this.cities.add(c);
+
     }
-    
+
+    /**
+     * print board to user
+     */
     public void displayBoard(){
         //display the first line of the output for board
         System.out.print("Oakland - ");

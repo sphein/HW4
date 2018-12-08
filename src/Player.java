@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 /**
@@ -15,6 +14,11 @@ public class Player {
     private ArrayList<DestinationCards> DC;
     private ArrayList<TrainCarCards> TC;
     
+    /**
+     * constructor
+     * @param n name for player
+     * @param t string color chosen for token
+     */
     public Player(String n, TrainTokens t){
         this.name = n;
         this.trains = t;
@@ -26,14 +30,25 @@ public class Player {
     }
     
     //public void need a fcn for updating numTrains
+
+    /**
+     * @return total number of train player has remaining
+     */
           
     public int getnumTrains(){
         return this.numTrains;
     }
     
+    /**
+     * @return returns position of user on the board
+     */
     public ScoreMarker getSM(){
         return this.SM;
     }
+
+    /**
+     * @return deck of destination card
+     */
     public ArrayList<DestinationCards> getDestinationCards(){
         return this.DC;
     }
@@ -68,14 +83,15 @@ public class Player {
         this.TC.add(c);
     }
     /**
-     *
-     * @param c1
-     * @param c2
+     * compares two cities to determine points earned
+     * @param c1 city object 
+     * @param c2 city object
      * @return
      */
+
     public int PointsThisRound(Route r){
         if(r.getNumber() == 2){
-            this.pointsEarned = 2;
+            this.pointsEarned = 1;
         }
         else if(r.getNumber() == 3){
             this.pointsEarned = 4;
@@ -142,5 +158,6 @@ public class Player {
     }
     public void removeTrainTokens(int a){
         this.numTrains = this.numTrains - a;
+
     }
 }

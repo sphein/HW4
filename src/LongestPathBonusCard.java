@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * @author sphein; oouk
  */
 public class LongestPathBonusCard {
+
     private static final int POINTS = 10;
     private int p1Longest;
     private int p2Longets;
@@ -85,4 +86,5 @@ public class LongestPathBonusCard {
         
         return this.person;
     }   
+
 }

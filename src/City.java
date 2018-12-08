@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 /**
@@ -9,15 +8,28 @@ import java.util.ArrayList;
 public class City {
     private String name;
     private ArrayList<Route> list;
-    
+
+    /**
+     *  //constructor
+     * @param n for city name
+     */
     public City(String n){
         this.name = n;
         this.list = new ArrayList();
     }
-    
+
+    /**
+     * adds a route to the list
+     * @param r object route
+     */
     public void addRoute(Route r){
         this.list.add(r);
     }
+
+    /**
+     * getter returns list
+     * @return list of routes
+     */
     public ArrayList<Route> getRoute(){
         return this.list;
     }

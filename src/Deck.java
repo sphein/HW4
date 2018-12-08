@@ -1,20 +1,15 @@
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author student
+ * Title: HW4
+ * Date: 10/17/2018
+ * @author sphein; oouk
  */
 public class Deck {
     private ArrayList<TrainCarCards> TCDeck;
+
     private int n;
     private TrainCarCards TC;
     private DestinationCards DC;
@@ -23,6 +18,7 @@ public class Deck {
     private ArrayList<DestinationCards> DC_Discard;
     private ArrayList<TrainCarCards> faceup_TC;
     
+
     public Deck(){
         TCDeck = new ArrayList();
         TC_Discard = new ArrayList();
@@ -30,6 +26,7 @@ public class Deck {
         DC_Discard = new ArrayList();
         faceup_TC = new ArrayList();
     }
+
     
     //Initialize TCDeck
     public void setTCDeck(){
@@ -171,4 +168,6 @@ public class Deck {
         this.faceup_TC.add(this.drawTrainCarCard());
     }
     
+
+
 }

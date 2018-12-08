@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class Game {
     
+
          public static boolean enoughTrains(Player p, Route r){
          
              if (p.getnumTrains() >= r.getNumber()){
@@ -15,18 +16,25 @@ public class Game {
              }
              return false;
          }      
+
          
     /**
-     *
-     * @param p
-     * @param c1
-     * @param c2
+     * updates ScoreMarker based on points earned
+     * @param p player object
+     * @param c1 city object
+     * @param c2 city object
      * @return
      */
+
     public static int moveScoreMarker(Player p, Route r){
              return p.PointsThisRound(r);
+
          }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
         //declare variables
         Board board = new Board();
@@ -128,9 +136,7 @@ public class Game {
              }
         }
 
-
-
-        //output the board and face up cards
+         //output the board and face up train car cards
         System.out.println("This is the board: ");
         board.displayBoard();
         System.out.print("These are the face-up train car cards: ");
@@ -138,6 +144,7 @@ public class Game {
             System.out.print(i + 1 + ". " + aDeck.getFaceUp().get(i).getcolorTrainCarCard() + " ");
         }
         
+
         System.out.println();
         //output the first player's information
         playerNow  = P1;
@@ -153,6 +160,7 @@ public class Game {
         }
         System.out.println();
         
+
         //play
         do {
         
@@ -419,6 +427,7 @@ public class Game {
         //Calculate longest path bonue
         System.out.println("That is the end of the game. Calculating longest path...");
         
+
         
         
         //output scores one last time
