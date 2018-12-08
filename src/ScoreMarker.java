@@ -27,5 +27,6 @@ public class ScoreMarker {
     public void changePosition(int a){
         this.position  = a + this.position;
     }
+ 
            
 }

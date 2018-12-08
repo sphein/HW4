@@ -8,16 +8,12 @@ public class DestinationCards {
     private City City2;
     private int points;
 
-    /**
-     * constructor
-     */
-    public DestinationCards(){
-        Route r = new Route("Red", 3);
-        this.City1 = new City("Hayward");
-        this.City1.addRoute(r);
-        this.City2 = new City("Fremont");
-        this.City2.addRoute(r);
-        this.points = 3;
+    
+    public DestinationCards(City c1, City c2, int p){
+        this.City1 = c1;
+        this.City2 = c2;
+        this.points = p;
+
     }
 
     /**
@@ -32,13 +28,12 @@ public class DestinationCards {
      */
     public City getCity2(){
     return this.City2;
+    
+        public int getPoints(){
+            return this.points;
+        }
+    public String toString(){
+        return this.City1.getName() + " to " + this.City2.getName() + " Points: " + this.points;
     }
 
-    /**
-     *
-     * @return points 
-     */
-    public int getPoints(){
-        return this.points;
-    } 
 }
